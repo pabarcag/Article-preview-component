@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/pabarcag/Article-preview-component)
+- Live Site URL: [Add live site URL here](https://pabarcag.github.io/Article-preview-component/)
 
 ## My process
 
@@ -52,4 +52,4 @@ Although, there are many ways to do it, with HTML templates and fragments for ex
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Patosinsuerte)
