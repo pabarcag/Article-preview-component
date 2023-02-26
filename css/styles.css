@@ -1,0 +1,278 @@
+:root{
+    --bg-color:#EDF2F8;
+    --card-bg: #FFFFFF;
+    --title-color:#5F6975;
+    --text-cilor:#727983;
+    --active-color:#49556B;
+    --active-arrow-bg: #6E7F99;
+    --fw-500:500;
+    --fw-700:700;
+    --ff:'Manrope', sans-serif;
+ }
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--ff);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    max-width: 400px;
+    min-width: 300px;
+    margin: 5em 2em 5em;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__header{
+    background-image: url('../images/drawers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 2em 1.5em;
+}
+
+.card__body{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card__title{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--title-color);
+    font-weight: var(--fw-700);
+}
+
+.card__subtitle{
+    font-weight: var(--fw-500);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-cilor);
+}
+
+
+
+/** Hidden footer mobile.*/
+
+/**Start first with 'display: none' to agree the class 'card__active' later and show it.*/
+
+/**This can be done dynamically with JS (the HTML). but ...*/
+
+.card__social{
+    display: none;
+}
+
+
+
+/** Active footer Mobile / */
+.card__active{
+    position: absolute;
+    display: flex;
+    padding: 1.5em 1em;
+    justify-content: space-around;
+    background-color: var(--active-color);
+    gap: 1em;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+
+}
+
+.card__icons{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.card__icons>*:hover{
+    cursor: pointer;
+}
+.card__share{
+    color: var(--active-arrow-bg);
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.card__icon{
+    width: 25px;
+}
+
+.card__icon-img{
+    width: 100%;
+}
+
+.card__arrow{
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border: none;
+    padding: 1em;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.card__arrowimg--active{
+    filter: brightness(200%) contrast(200%) grayscale(100%) hue-rotate(0deg);
+}
+
+.card__arrow--active{
+    background-color: var(--active-arrow-bg);
+}
+
+/**End active footer mobile*/
+
+
+
+
+
+
+.card__stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__profile{
+    display: flex;
+    gap: 2em;
+
+}
+
+.card__photo{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+}
+.card__michelle{
+    width: 100%;
+}
+
+.card__info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.card__name{
+    color: var(--title-color);
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+}
+
+.card__date{
+    font-weight: var(--fw-500);
+    font-size: 0.9rem;
+    color: var(--text-cilor);
+}
+
+
+@media screen and (min-width:1030px){
+
+    /*this wrapper (main) works like zindex as i couldn't position social media above the card with z index alone */
+
+    main{
+        max-width: 980px;
+        position: relative;
+    }
+
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        max-width: 980px;
+        min-width: 800px;
+        margin: 5em 2em 5em;
+        position: static;
+    }
+
+    .card__header{
+        background-position: 10;
+        max-width: 800px;
+        height: 370px;
+    }
+
+    .card__content{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding: 3em 3em 0em;
+    }
+
+    .card__title{
+        font-size: 1.7rem;
+    }
+    
+    .card__subtitle{
+        font-size: 1rem;
+    }
+
+    .card__active{
+        position: absolute;
+        display: flex;
+        padding: 0.7em 2em;
+        justify-content: center;
+        gap: 2em;
+        max-width: 230px;
+        left: 760px;
+        bottom: 200px;
+    }
+
+
+    .card__icons{
+        align-items: center;
+        gap: 1.2em;
+    }
+    
+    .card__share{
+        font-size: 0.8rem;
+    }
+    .card__icon{
+        width: 20px;
+    }
+    
+    .card__arrow--change{
+        background-color: var(--active-arrow-bg);
+    }
+
+    .card__arrowimg--change{
+        filter: brightness(200%) contrast(200%) grayscale(100%) hue-rotate(0deg);
+    }
+    .card__arrow--active{
+        display:none;
+    }
+    
+
+}
